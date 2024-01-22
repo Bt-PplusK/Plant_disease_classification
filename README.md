@@ -5,7 +5,6 @@
 1. [Introduction](#introduction)
 2. [Dataset](#dataset)
 3. [Deployment](#deployment)
-4. [Usage](#usage)
 
 ## Introduction
 This project focuses on the classification of plant health conditions, specifically targeting three categories: Healthy, Powdery Mildew, and Rust. The goal is to develop a robust model that can accurately identify and differentiate between these conditions based on images of plant leaves.
@@ -44,7 +43,7 @@ Community Engagement: Engage local communities in plant health awareness and sus
 ## Dataset
 Firstly,I downloaded dataset from kaggle.The model is trained on a comprehensive dataset that includes images of plant leaves representing various health conditions. The dataset is carefully curated and labeled with three classes: Healthy, Powdery Mildew, and Rust. Each class provides a diverse range of images to ensure the model's generalization across different plant species and environmental conditions.
 The dataset is split into three distinct sets for training , validation, and testing.
-The dataset is available at [Google drive](). 
+The dataset is available at Google drive.
 
 ### EDA 
 An exploratory data analysis (EDA) for this project is provided in the Plant_disease_classification.ipynb notebook. It contains visualizations and insights derived from the dataset.Moreover,it also include augmentation.
@@ -53,10 +52,10 @@ An exploratory data analysis (EDA) for this project is provided in the Plant_dis
 
 ### Local Test (Docker Container)
 
-Execute the following command to build the Docker image. This will create an image with the tag `vegetables-classifier:v1` (you can pick another name if you want).
+Execute the following command to build the Docker image. This will create an image with the tag ` plant_disease_classification` (you can pick another name if you want).
 
 ```bash
-$ docker build -t vegetable-classifier:v1 .
+$ docker build -t  plant_disease_classification
 ```
 
 This process might take several minutes as Docker needs to download the base images and build the necessary layers for your application.
@@ -64,5 +63,5 @@ This process might take several minutes as Docker needs to download the base ima
 Run the following command to start a container based on the image you just created. This command also maps port `8080` of the container to port `8080` on your local machine.
 
 ```bash
-$ docker run -it --name Vegetable-Classifer -p 8080:8080 vegetable-classifier:v1
+$ docker run -p 5000:5000 plant_disease_classification
 ```
