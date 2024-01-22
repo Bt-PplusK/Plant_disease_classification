@@ -47,4 +47,22 @@ The dataset is split into three distinct sets for training , validation, and tes
 The dataset is available at [Google drive](). 
 
 ### EDA 
-An exploratory data analysis (EDA) for this project is provided in the Plant_disease_classification.ipynb notebook. It contains visualizations and insights derived from the dataset.
+An exploratory data analysis (EDA) for this project is provided in the Plant_disease_classification.ipynb notebook. It contains visualizations and insights derived from the dataset.Moreover,it also include augmentation.
+
+## Deployment
+
+### Local Test (Docker Container)
+
+Execute the following command to build the Docker image. This will create an image with the tag `vegetables-classifier:v1` (you can pick another name if you want).
+
+```bash
+$ docker build -t vegetable-classifier:v1 .
+```
+
+This process might take several minutes as Docker needs to download the base images and build the necessary layers for your application.
+
+Run the following command to start a container based on the image you just created. This command also maps port `8080` of the container to port `8080` on your local machine.
+
+```bash
+$ docker run -it --name Vegetable-Classifer -p 8080:8080 vegetable-classifier:v1
+```
