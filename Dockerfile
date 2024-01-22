@@ -4,4 +4,4 @@ COPY . /app
 RUN pip install --no-cache-dir Flask torch Pillow
 EXPOSE 5000
 ENV NAME World
-CMD ["python", "plant_disease_classification.py"]
+CMD ["python", "app.py"]
