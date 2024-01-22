@@ -44,4 +44,7 @@ Community Engagement: Engage local communities in plant health awareness and sus
 ## Dataset
 Firstly,I downloaded dataset from kaggle.The model is trained on a comprehensive dataset that includes images of plant leaves representing various health conditions. The dataset is carefully curated and labeled with three classes: Healthy, Powdery Mildew, and Rust. Each class provides a diverse range of images to ensure the model's generalization across different plant species and environmental conditions.
 The dataset is split into three distinct sets for training , validation, and testing.
-The dataset is available at [Google drive]().
+The dataset is available at [Google drive](). 
+
+### EDA 
+An exploratory data analysis (EDA) for this project is provided in the Plant_disease_classification.ipynb notebook. It contains visualizations and insights derived from the dataset.
